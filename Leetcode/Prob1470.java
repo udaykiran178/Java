@@ -1,16 +1,21 @@
+/* Brute Force Approach (Own)
+ --> Time Complexity : O(n)
+ -->  Space complexity : O(n)
+*/
 public class Prob1470 {
     public static void main(String[] args) {
-        int n=3;
+        int nums[] = { 1,2,3,4,4,3,2,1 };
+        int n = 4;
         int j=0;
-       int nums[]={2,5,1,3,4,7};
-       int ans[]=new int[2*n];
-       for(int i=0;i<ans.length;i=i+2){
-            ans[i]=nums[j];
-            ans[i+1]=nums[j+n];
-            j++;
-       }
-       for(int i=0;i<ans.length;i++){
-        System.out.print(ans[i]+" ");
+        int res[]=new int[2*n];
+        for(int i=0;i<nums.length;i=i+2){
+                res[i]=nums[j];
+                res[i+1]=nums[j+n];
+                j++;
+           
+        }
+       for(int i=0;i<res.length;i++){
+        System.out.print(res[i]+",");
        }
     }
 }
