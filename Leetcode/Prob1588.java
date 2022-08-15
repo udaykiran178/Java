@@ -6,15 +6,11 @@ import java.util.Arrays;
 */
 public class Prob1588 {
     public static void main(String[] args) {
-        int arr[]={1,4,2,5,3};
-        int subArray[]=Arrays.copyOfRange(arr, 1, 4);
+        int arr[]={10,11,12};
+        int sum=0;
         for(int i=0;i<arr.length;i++){
-            System.out.print(arr[i]+" ");
+           sum=sum+(((i+1)*(arr.length-i)+1)/2)*arr[i];
         }
-        System.out.println();
-
-        for(int i=0;i<subArray.length;i++){
-            System.out.print(subArray[i]+" ");
-        }
+        System.out.println(sum);
     }
 }

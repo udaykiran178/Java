@@ -2,20 +2,19 @@
  --> Time Complexity : 
  -->  Space complexity : 
 */
-public class Prob2176 {
+public class Prob1464 {
     public static void main(String[] args) {
-        int nums[]={1,2,3,4};
-        int k=1;
-        int res=0;
+        int nums[]={1,5,4,5};
+        int max=0;
         for(int i=0;i<nums.length;i++){
             for(int j=i+1;j<nums.length;j++){
-                if(nums[i] == nums[j] && (i * j) % k==0){
-                    res++;
+                if(i!=j){
+                    max=Math.max((nums[i]-1)*(nums[j]-1),max);
                 }
-                else continue;
+                
             }
         }
-        System.out.println(res);
-        
+        System.out.println(max);
+
     }
 }

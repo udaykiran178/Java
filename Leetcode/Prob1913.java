@@ -9,7 +9,7 @@ public class Prob1913 {
         int res=0;
         int max=0;
         for(int i=0;i<nums.length;i++){
-            for(int j=i+1;j<nums.length-3;j++){
+            for(int j=i+1;j<nums.length-1;j++){
                 res=(nums[i]*nums[j])-(nums[i+1]*nums[j+1]);
             }
             System.out.println(res);
